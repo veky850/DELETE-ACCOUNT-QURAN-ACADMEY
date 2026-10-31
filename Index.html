@@ -1,7 +1,3 @@
-# DELETE-ACCOUNT-QURAN-ACADMEY
-QURAN ACDAMY
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -255,11 +251,12 @@ QURAN ACDAMY
 
         <hr style="border: none; border-top: 1px solid var(--border-color); margin: 30px 0;">
 
-        <h2 style="font-size: 20px; color: var(--slate-900); margin-bottom: 12px;">What Data is Deleted?</h2>
+        <h2 style="font-size: 20px; color: var(--slate-900); margin-bottom: 12px;">What Data is Permanently Deleted?</h2>
         <ul style="margin-left: 20px; color: var(--slate-700); font-size: 14px;">
-            <li><strong>Authentication Identity:</strong> Firebase User ID, Email, and Name.</li>
-            <li><strong>Cloud Firestore Records:</strong> All synced bookmarks, last read Ayah positions, daily Hadith progress, and personal notes.</li>
-            <li><strong>Retention Period:</strong> Deletions initiated via the app execute immediately in real-time (0 seconds). Email requests are processed within 24–48 hours. No archival backups are retained after confirmation.</li>
+            <li><strong>Authentication Identity & OAuth Tokens:</strong> Firebase User ID, Email, Display Name, Profile Photo URL, and Google Sign-In access tokens are permanently revoked and deleted.</li>
+            <li><strong>Cloud Firestore Records (<code>users/{uid}/**</code>):</strong> All synced cloud backups, bookmarks, favorites, Qasas progress, Tasbeeh history, and personal notes are permanently erased.</li>
+            <li><strong>Local Device Storage & Trackers:</strong> All Room SQLite tables (Bookmarks, Favorites, Chat History, Qasas Progress, Knowledge Bookmarks) and all 12+ SharedPreferences trackers (Qaza Namaz Tracker, Tasbeeh, Khatam Planner, Zakat Calculator, Ramadan Tracker) are completely wiped.</li>
+            <li><strong>Retention Period:</strong> Deletions initiated via the app execute immediately in real-time (0 seconds). Email requests are processed within 24–48 hours. Zero archival backups are retained after confirmation.</li>
         </ul>
     </div>
 </div>
